@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>UpDownGame</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,9 +36,8 @@
 
         <div class="in-game">
           <h2>정답을 맞춰주세요!!</h2>
-          <input type="number" placeholder="1~100까지 숫자를 입력하세요" id="user-input"/>
-          <button class="submit game-btn">Go!</button>
-
+          <input type="number" placeholder="1~100까지 숫자를 입력하세요" id="user-input" onkeydown="enterKey()"/>
+          
           <section class="text-area">
             <p class="chance">
               남은 기회: 
@@ -48,6 +47,7 @@
             <p class="result">숫자를 입력하고 Go! 버튼 클릭!</p>
             <span class="answer"></span>
           </section>
+          <button class="submit game-btn">Go!</button>
 
           <div class="bottom-btn">
             <button class="reset game-btn">Reset</button>

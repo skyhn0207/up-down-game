@@ -6,6 +6,7 @@ const ruleBtn = document.querySelector('.rules-btn'),
   submit = document.querySelector('.submit'),
   result = document.querySelector('.result'),
   chanceNum = document.querySelector('.chance-num'),
+  chanceText = document.querySelector('.chance')
   reset = document.querySelector('.reset'),
   goBackBtn = document.querySelector('.go-back'),
   answer = document.querySelector('.answer');
@@ -79,7 +80,9 @@ function playGame() {
     gameOver = true
     submit.disabled = true
     submit.style.background = '#aaa'
-    result.textContent = '정답입니다!!'
+    answer.textContent = `정답:${gameAnswer}`
+    chanceText.style.display = 'none'
+    return result.textContent = '정답입니다!!'
   }
   userInput.value = ''
   numList.push(inputValue)
@@ -96,6 +99,12 @@ function playGame() {
   }
 }
 
+function enterKey() {
+  if(window.event.keyCode == 13) {
+    playGame()
+  }
+}
+
 function resetGame() {
   gameOver = false
   result.textContent = '숫자를 입력하고 Go! 버튼 클릭!'
@@ -107,6 +116,7 @@ function resetGame() {
   numList = []
   answer.style.textContent = ''
   answer.style.display = 'none'
+  chanceText.style.display = 'block'
   randomAnswer()
 }
 reset.addEventListener('click', resetGame)
