@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="big-wrap">
+    <header>
+    </header>
+    <main>
+      <div class="main-game-wrap">
+        <h1>Up & Down Game!</h1>
+        <div class="main-game">
+          <div class="rules">
+            <div class="btn-wrap">
+              <button class="rules-btn main-btn">게임설명</button>
+            </div>
+            <ul class="hidden-content">
+              <li>1. "게임시작"을 누르면 1~100사이의 숫자가 무작위로 배정됩니다.</li>
+              <li>2. 무작위로 배정된 숫자를 예상하여 맞추세요.</li>
+              <li>3. 무작위 숫자보다 작은 숫자를 입력하면 "Down", 큰숫자를 입력하면 "Up"이 표시됩니다.</li>
+              <li>4. 기회는 5번이 주어집니다.</li>
+              <li>5. 5번안에 못맞추면 게임오버! 맞추면 승리!</li>
+            </ul>
+          </div>
+  
+          <div class="play">
+            <button class="play-btn main-btn">게임시작</button>
+          </div>
+        </div>
+
+        <div class="in-game">
+          <h2>정답을 맞춰주세요!!</h2>
+          <input type="number" placeholder="1~100까지 숫자를 입력하세요" id="user-input"/>
+          <button class="submit game-btn">Go!</button>
+
+          <section class="text-area">
+            <p class="chance">
+              남은 기회: 
+              <span class="chance-num">5</span>
+              회
+            </p>
+            <p class="result">숫자를 입력하고 Go! 버튼 클릭!</p>
+            <span class="answer"></span>
+          </section>
+
+          <div class="bottom-btn">
+            <button class="reset game-btn">Reset</button>
+            <button class="go-back game-btn">Back</button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

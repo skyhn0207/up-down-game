@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: 000;
+}
+ul, ol, li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+}
+html {
+  position: relative;
+}
+body {
+  margin: 0 auto;
+  max-width: 600px;
+}
